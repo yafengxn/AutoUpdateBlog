@@ -1,11 +1,14 @@
 #!/bin/sh
+# 发布环境文件夹
 PublishArticleEnvDir=/Users/feng/Desktop/Code/GithubDemo/yafengxn.github.io/
 PublishArticleSourcePath=/Users/feng/Documents/NoteBook/missing-semester
 PublishArticleDir=$(echo $PublishArticleSourcePath | sed -e 's/\/.*\///g')
+# 待发布文件名
 PublishArticleName=${1}
+# 待发布文件路径
 PublishArticlePath=${PublishArticleSourcePath}/${PublishArticleName}
 
-#修改文件名为2020-11-04-misssemester-文件名，并拷贝到指定目录
+# 修改文件名为2020-11-04-misssemester-文件名，并拷贝到指定目录
 copyArticleToPublishEnv() {
 	PublishArticleName=$(date "+%Y-%m-%d")-"$PublishArticleDir"-$1
 
