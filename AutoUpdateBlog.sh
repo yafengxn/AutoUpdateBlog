@@ -10,7 +10,7 @@ PublishArticlePath=${PublishArticleSourcePath}/${PublishArticleName}
 
 # 修改文件名为2020-11-04-misssemester-文件名，并拷贝到指定目录
 copyArticleToPublishEnv() {
-	PublishArticleName=$(date "+%Y-%m-%d")-"$PublishArticleDir"-$1
+	PublishArticleName=$(date "+%Y-%m-%d")-"$PublishArticleDir"-$PublishArticleName
 
 	if [ ! -f "$PublishArticlePath" ]; then
 		echo "❌Error: 待发布文章不存在, 请查看源文件是否存在"
