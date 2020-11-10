@@ -20,7 +20,7 @@ copyArticleToPublishEnv() {
 	fi
 
 	# 拷贝
-	if [  cp "$PublishArticlePath $PublishArticleEnvDir/_posts/$PublishArticleName" -ne 0 ]; then
+	if [  cp $PublishArticlePath $PublishArticleEnvDir/_posts/$PublishArticleName ]; then
 		echo "❌Error: 待发布文章不存在, 请查看是否copy成功"
 		exit 0
 	fi
